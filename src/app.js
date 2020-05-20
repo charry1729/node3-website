@@ -5,6 +5,7 @@ const request = require("request")
 
 const hbs = require("hbs")
 const app = express();
+const port = process.env.port || 3003
 
 const forecast= require("./utils/forecast.js")
 const geocode= require("./utils/geocode.js")
@@ -65,7 +66,7 @@ app.get('/help/*',(req,res)=> {
 // });
 
 
-app.get('/weather',(req,res)=>{
+app.get('/weather?address=',(req,res)=>{
     if (!req.query.address) {
         return res.send({
             error:"plz provide search term"
@@ -178,10 +179,9 @@ app.get('*',(req,res)=> {
 
 
 
-app.listen(3003,()=>{
+app.listen(port,()=>{
     console.log("server is up")
 });
-
 
 
 
