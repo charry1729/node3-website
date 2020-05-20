@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Home</title>
+    <link rel="icon" href="/img/weather.png"></head>
+
+</head>
+<body>
+    <div class="main-content">
+        {{>header}} 
+        <br>
+    <form>
+        <input placeholder="location">
+        <button>Search</button>
+    </form>
+
+    <p class="message-1"></p>
+    <p class="message-2"></p>
+    {{!-- <img class="portrait" src="./img/formulas.jpg" alt="loading"> --}}
+    </div>
+    <script src="./js/app.js"></script>
+
+    {{>footer}}
+</body>
+</html>
